@@ -12,13 +12,13 @@ try{var _t=localStorage.getItem("pinealon-theme");if(_t==="light"||_t==="dark")d
 :root{
   --bg0:#06070d; --bg1:#0a0c17;
   --ink:#edf0f9; --muted:#a9b1c9; --faint:#7f88a5;
-  --sky:#fef08a; --sky-deep:#cfc051;
-  --teal:#a16207; --teal-deep:#422006;
-  --org:#ffffff; --org-deep:#b3b3b3;
-  --amber:#ef9b0a; --rose:#fc2559; --cyan:#fef5af;
+  --sky:#facc15; --sky-deep:#9b7d03;
+  --teal:#34d399; --teal-deep:#1b7c59;
+  --org:#facc15; --org-deep:#9b7d03;
+  --amber:#34d399; --rose:#facc15; --cyan:#34d399;
   --card:#0d1020; --card2:#12162b;
   --line:rgba(255,255,255,.09);
-  --grad:linear-gradient(100deg,#fef08a 5%,#a16207 50%,#ffffff 95%);
+  --grad:linear-gradient(100deg,#fce68c 5%,#07a169 50%,#ffffff 95%);
   --ongrad:#0a0c14;
   --radius:18px;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -30,13 +30,13 @@ body{font-family:var(--font);background:var(--bg0);color:var(--ink);
   font-size:1.06rem;line-height:1.75;overflow-x:clip;-webkit-font-smoothing:antialiased}
 .bg-grad{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(900px 620px at 12% -6%, rgba(207, 192, 81,0.288), transparent 60%),
+    radial-gradient(900px 620px at 12% -6%, rgba(207,182,81,0.288), transparent 60%),
     radial-gradient(820px 600px at 88% 22%, rgba(179,179,179,0.192), transparent 60%),
     radial-gradient(1000px 800px at 50% 110%, rgba(132, 227, 17,0.192), transparent 62%),
-    radial-gradient(700px 500px at 78% 78%, rgba(252, 37, 89,0.096), transparent 60%)}
+    radial-gradient(700px 500px at 78% 78%, rgba(249,207,40,0.096), transparent 60%)}
 #dots{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.85}
 .orb{position:fixed;z-index:0;pointer-events:none;border-radius:50%;filter:blur(90px)}
-.o1{width:520px;height:520px;left:-140px;top:6%;background:radial-gradient(circle,rgba(207, 192, 81,0.24),transparent 70%);animation:drift1 38s ease-in-out infinite alternate}
+.o1{width:520px;height:520px;left:-140px;top:6%;background:radial-gradient(circle,rgba(207,182,81,0.24),transparent 70%);animation:drift1 38s ease-in-out infinite alternate}
 .o2{width:460px;height:460px;right:-120px;top:38%;background:radial-gradient(circle,rgba(179,179,179,0.192),transparent 70%);animation:drift2 46s ease-in-out infinite alternate}
 .o3{width:430px;height:430px;left:24%;bottom:-160px;background:radial-gradient(circle,rgba(132, 227, 17,0.192),transparent 70%);animation:drift3 54s ease-in-out infinite alternate}
 @keyframes drift1{from{transform:translate(0,0)}to{transform:translate(120px,80px)}}
@@ -67,13 +67,13 @@ body{font-family:var(--font);background:var(--bg0);color:var(--ink);
 [data-theme="light"]{
   --bg0:#e8ebf0; --bg1:#eef1f6;
   --ink:#1b2436; --muted:#4d5871; --faint:#707a93;
-  --sky:#cfc051; --sky-deep:#b3b3b3;
-  --teal:#422006; --teal-deep:#422006;
-  --org:#cfc051; --org-deep:#b3b3b3;
-  --amber:#6e2804; --rose:#a1123f; --cyan:#422006;
+  --sky:#a58504; --sky-deep:#372d01;
+  --teal:#188960; --teal-deep:#072a1d;
+  --org:#a58504; --org-deep:#372d01;
+  --amber:#a58504; --rose:#188960; --cyan:#188960;
   --card:#f8fafc; --card2:#e9edf3;
   --line:rgba(15,23,42,.14);
-  --grad:linear-gradient(100deg,#cfc051,#422006,#a16207);
+  --grad:linear-gradient(100deg,#cfb651,#06422c,#07a169);
   --ongrad:#ffffff;
   color-scheme:light;
 }
@@ -84,7 +84,7 @@ body{font-family:var(--font);background:var(--bg0);color:var(--ink);
 [data-theme="light"] #dots{opacity:.55}
 [data-theme="light"] .bg-grad{opacity:.55}
 nav.chapters{position:sticky;top:0;z-index:50;background:rgba(6,7,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav.chapters .rail{max-width:1080px;margin:0 auto;padding:.65rem 1rem;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding-right:3.8rem}
+nav.chapters .rail{max-width:1280px;margin:0 auto;padding:.65rem 1rem;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding-right:3.8rem}
 nav.chapters .rail::-webkit-scrollbar{display:none}
 nav.chapters a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:600;
   letter-spacing:.04em;padding:.42rem .8rem;border:1px solid var(--line);border-radius:999px;white-space:nowrap;transition:all .25s ease}
@@ -119,7 +119,7 @@ nav.chapters a.active{color:#0a0c14;background:var(--grad);border-color:transpar
   .toc .mini-bar{height:3px;background:rgba(255,255,255,.08);border-radius:99px;margin-top:.55rem;overflow:hidden}
   .toc .mini-bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:99px}
 }
-.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 1.25rem}
+.wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 1.25rem}
 section.chapter{padding:4.2rem 0 1rem;scroll-margin-top:84px}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.22em;
   text-transform:uppercase;color:var(--faint);margin-bottom:1rem}
@@ -129,13 +129,13 @@ h2{font-family:var(--disp);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;le
 h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lede{color:var(--muted);font-size:1.12rem;max-width:44rem;margin-bottom:2rem}
 .lede strong{color:var(--ink)}
-.hero{position:relative;z-index:1;text-align:center;padding:5.5rem 1.25rem 3.5rem;max-width:960px;margin:0 auto}
+.hero{position:relative;z-index:1;text-align:center;padding:5.5rem 1.25rem 3.5rem;max-width:1280px;margin:0 auto}
 .disc-strip{display:block;width:fit-content;max-width:92%;margin:.9rem auto 0;font-size:.78rem;font-weight:600;letter-spacing:.03em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.42rem 1.05rem;background:rgba(255,255,255,.03)}
 .badge{display:inline-flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--ink);border:1px solid var(--line);background:rgba(255,255,255,.04);
   padding:.55rem 1.1rem;border-radius:999px;margin-bottom:1.6rem}
-.badge .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(239, 155, 10,.6);animation:pulse 2.2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(239, 155, 10,.55)}70%{box-shadow:0 0 0 12px rgba(239, 155, 10,0)}100%{box-shadow:0 0 0 0 rgba(239, 155, 10,0)}}
+.badge .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(10,239,155,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(10,239,155,.55)}70%{box-shadow:0 0 0 12px rgba(10,239,155,0)}100%{box-shadow:0 0 0 0 rgba(10,239,155,0)}}
 .hero h1{font-family:var(--disp);font-weight:900;letter-spacing:-.03em;line-height:1.02;font-size:clamp(2.4rem,7.5vw,4.8rem);margin-bottom:1.1rem}
 .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
   background-size:200% auto;animation:sheen 9s ease-in-out infinite}
@@ -185,14 +185,14 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .kv{display:flex;gap:.9rem;align-items:flex-start;padding:.9rem 0;border-top:1px solid var(--line)}
 .kv:first-of-type{border-top:none}
 .kv .k{flex:0 0 auto;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
-  padding:.3rem .7rem;border-radius:8px;margin-top:.25rem}
+  padding:.3rem .7rem;border-radius:8px;margin-top:.25rem;max-width:62%}
 .kv .k.s{background:rgba(124,199,255,.12);color:var(--sky);border:1px solid rgba(124,199,255,.35)}
-.kv .k.t{background:rgba(161, 98, 7,.10);color:var(--teal);border:1px solid rgba(161, 98, 7,.35)}
+.kv .k.t{background:rgba(7,161,105,.10);color:var(--teal);border:1px solid rgba(7,161,105,.35)}
 .kv .k.o{background:rgba(255,255,255,.12);color:var(--org);border:1px solid rgba(255,255,255,.35)}
-.kv .k.a{background:rgba(239, 155, 10,.12);color:var(--amber);border:1px solid rgba(239, 155, 10,.35)}
-.kv .k.g{background:rgba(252, 37, 89,.12);color:var(--rose);border:1px solid rgba(252, 37, 89,.35)}
+.kv .k.a{background:rgba(10,239,155,.12);color:var(--amber);border:1px solid rgba(10,239,155,.35)}
+.kv .k.g{background:rgba(249,207,40,.12);color:var(--rose);border:1px solid rgba(249,207,40,.35)}
 .kv p{font-size:.99rem}
-.diagram{background:radial-gradient(600px 300px at 50% 0%,rgba(207, 192, 81,.10),transparent 70%),#090b15;
+.diagram{background:radial-gradient(600px 300px at 50% 0%,rgba(207,182,81,.10),transparent 70%),#090b15;
   border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;margin:0 0 1.4rem;overflow:hidden}
 .diagram svg{display:block;width:100%;height:auto}
 .diagram .cap{text-align:center;color:var(--faint);font-size:.85rem;margin-top:.9rem;letter-spacing:.03em}
@@ -209,14 +209,14 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .ebar .row .v{font-size:.88rem;color:var(--faint);font-variant-numeric:tabular-nums}
 .ebar .track{height:14px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
 .ebar .fill{height:100%;width:0;border-radius:999px;transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
-.in .ebar .fill{width:var(--w)}
+.ebar.in .fill{width:var(--w)}
 .ebar .note{font-size:.85rem;color:var(--faint);margin-top:.45rem}
 .anec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 @media(max-width:720px){.anec-grid{grid-template-columns:1fr}}
 .anec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;position:relative;overflow:hidden}
 .anec::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
 .anec .stamp{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;
-  color:var(--amber);border:1px solid rgba(239, 155, 10,.4);background:rgba(239, 155, 10,.08);
+  color:var(--amber);border:1px solid rgba(10,239,155,.4);background:rgba(10,239,155,.08);
   padding:.28rem .6rem;border-radius:7px;text-transform:uppercase;margin-bottom:.65rem}
 .anec h4{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
 .anec-head{display:flex;align-items:center;gap:.85rem;margin-bottom:.55rem}
@@ -232,7 +232,7 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .anec p{color:var(--muted);font-size:.95rem}
 .anec p strong{color:var(--ink)}
 .anec .caveat{margin-top:.8rem;font-size:.82rem;color:var(--faint);border-top:1px dashed var(--line);padding-top:.7rem}
-.folk-note{background:rgba(239, 155, 10,.06);border:1px solid rgba(239, 155, 10,.3);border-radius:var(--radius);
+.folk-note{background:rgba(10,239,155,.06);border:1px solid rgba(10,239,155,.3);border-radius:var(--radius);
   padding:1.2rem 1.4rem;margin-bottom:1.6rem;color:var(--muted);font-size:.98rem}
 .folk-note strong{color:var(--amber)}
 .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
@@ -243,9 +243,9 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .scard h4{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
 .scard p{color:var(--muted);font-size:.95rem}
 .scard p strong{color:var(--ink)}
-.lvl-known .level{background:rgba(239, 155, 10,.1);color:var(--amber);border:1px solid rgba(239, 155, 10,.4)}
+.lvl-known .level{background:rgba(10,239,155,.1);color:var(--amber);border:1px solid rgba(10,239,155,.4)}
 .lvl-theory .level{background:rgba(255,255,255,.1);color:var(--org);border:1px solid rgba(255,255,255,.4)}
-.lvl-unknown .level{background:rgba(252, 37, 89,.1);color:var(--rose);border:1px solid rgba(252, 37, 89,.4)}
+.lvl-unknown .level{background:rgba(249,207,40,.1);color:var(--rose);border:1px solid rgba(249,207,40,.4)}
 .gloss{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
 .g-item{border-bottom:1px solid var(--line)}
 .g-item:last-child{border-bottom:none}
@@ -266,10 +266,10 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 @keyframes gaBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @keyframes gaTilt{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
 .g-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.g-a .gsci,.g-a .gex{padding:0 1.4rem 1rem;color:var(--muted);font-size:.95rem}
-.g-a .gsci strong,.g-a .gex strong{color:var(--ink)}
+.g-a .gsci{padding:0 1.4rem 1rem;color:var(--muted);font-size:.95rem}
+.g-a .gsci strong{color:var(--ink)}
 .gslabel{display:block;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}
-.g-a .gex{margin:0 1.4rem 1rem;padding:0 0 0 1rem;border-left:2px solid var(--line)}
+
 .g-a .plain{margin:0 1.4rem 1.3rem;background:rgba(255,255,255,.035);border:1px dashed rgba(255,255,255,.22);
   border-radius:12px;padding:1rem 1.2rem;font-size:.96rem;color:var(--muted)}
 .g-a .plain b{color:var(--ink)}
@@ -282,7 +282,7 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .take h4{font-size:1.05rem;font-weight:800;margin-bottom:.4rem}
 .take p{color:var(--muted);font-size:.95rem}
 .take p strong{color:var(--ink)}
-.limits{background:rgba(252, 37, 89,.05);border:1px solid rgba(252, 37, 89,.3);border-radius:var(--radius);
+.limits{background:rgba(249,207,40,.05);border:1px solid rgba(249,207,40,.3);border-radius:var(--radius);
   padding:1.4rem 1.6rem;margin-bottom:1.6rem}
 .limits h3{font-family:var(--disp);font-size:1.2rem;font-weight:800;margin-bottom:.7rem;color:var(--rose)}
 .limits ul{list-style:none;display:grid;gap:.6rem}
@@ -349,7 +349,7 @@ mini-poll { display: block; }
   border-radius: 18px;
   background:
     linear-gradient(var(--card, #0d1020), var(--card, #0d1020)) padding-box,
-    linear-gradient(135deg, var(--mpc1, #fef08a), var(--mpc2, #a16207)) border-box;
+    linear-gradient(135deg, var(--mpc1, #fce68c), var(--mpc2, #07a169)) border-box;
   font-family: inherit;
   overflow: hidden;
 }
@@ -361,11 +361,11 @@ mini-poll { display: block; }
   color: var(--muted, #a9b1c9); font-size: .88rem;
 }
 .mpoll-teaser:hover { background: rgba(255,255,255,.03); }
-.mpoll-teaser:focus-visible { outline: 2px solid var(--amber, #ef9b0a); outline-offset: -2px; }
+.mpoll-teaser:focus-visible { outline: 2px solid var(--amber, #0aef9b); outline-offset: -2px; }
 .mpoll-teaser-dot {
   flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--mpc1, #fef08a);
-  box-shadow: 0 0 10px var(--mpc1, #fef08a);
+  background: var(--mpc1, #fce68c);
+  box-shadow: 0 0 10px var(--mpc1, #fce68c);
   animation: mpulse 2.4s ease-in-out infinite;
 }
 @keyframes mpulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
@@ -399,7 +399,7 @@ mini-poll { display: block; }
   display: flex; align-items: center; justify-content: center; gap: .6rem;
   max-width: 620px; margin: 0 auto 1.4rem; padding: .6rem 1.2rem;
   border-radius: 999px; font-size: .82rem; font-weight: 700; color: #0a0c14;
-  background: linear-gradient(100deg, var(--acc1, #fef08a), var(--acc2, #a16207), var(--acc3, #ffffff));
+  background: linear-gradient(100deg, var(--acc1, #fce68c), var(--acc2, #07a169), var(--acc3, #ffffff));
 }
 .mpoll-topbanner-dot {
   flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%;
@@ -420,23 +420,23 @@ mini-poll { display: block; }
   background: rgba(255,255,255,.03); color: var(--ink, #edf0f9);
   font-size: .95rem; transition: border-color .15s, background .15s, transform .15s;
 }
-.mpoll-opt:hover { border-color: var(--amber, #ef9b0a); background: rgba(255,255,255,.05); }
-.mpoll-opt:focus-visible { outline: 2px solid var(--amber, #ef9b0a); outline-offset: 2px; }
-.mpoll-opt.sel { border-color: var(--amber, #ef9b0a); background: rgba(239, 155, 10,.10); }
+.mpoll-opt:hover { border-color: var(--amber, #0aef9b); background: rgba(255,255,255,.05); }
+.mpoll-opt:focus-visible { outline: 2px solid var(--amber, #0aef9b); outline-offset: 2px; }
+.mpoll-opt.sel { border-color: var(--amber, #0aef9b); background: rgba(10,239,155,.10); }
 .mpoll-emoji { font-size: 1.25rem; flex: 0 0 auto; }
 .mpoll-label { flex: 1; }
 .mpoll-vote, .mpoll-again {
   display: block; width: 100%; margin-top: .9rem; padding: .8rem;
   border: 0; border-radius: 12px; cursor: pointer;
   font-size: 1rem; font-weight: 800; color: #0a0c14;
-  background: linear-gradient(100deg, var(--acc1, #fef08a), var(--acc2, #a16207));
+  background: linear-gradient(100deg, var(--acc1, #fce68c), var(--acc2, #07a169));
   transition: transform .15s, opacity .15s;
 }
 .mpoll-vote:hover:not(:disabled), .mpoll-again:hover { transform: translateY(-1px); }
 .mpoll-vote:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 .mpoll-note {
-  margin-top: .7rem; font-size: .88rem; color: #ef9b0a;
-  border: 1px dashed rgba(239, 155, 10,.4); border-radius: 10px; padding: .6rem .8rem;
+  margin-top: .7rem; font-size: .88rem; color: #0aef9b;
+  border: 1px dashed rgba(10,239,155,.4); border-radius: 10px; padding: .6rem .8rem;
 }
 .mpoll-bars { display: grid; gap: .6rem; margin-top: .4rem; }
 .mpoll-rowtop {
@@ -444,17 +444,17 @@ mini-poll { display: block; }
   font-size: .9rem; color: var(--ink, #edf0f9); margin-bottom: .28rem;
 }
 .mpoll-pct { font-weight: 800; color: var(--muted, #a9b1c9); flex: 0 0 auto; }
-.mpoll-mine { color: var(--amber, #ef9b0a); font-weight: 700; font-size: .8rem; }
+.mpoll-mine { color: var(--amber, #0aef9b); font-weight: 700; font-size: .8rem; }
 .mpoll-track {
   height: 10px; border-radius: 999px; overflow: hidden;
   background: rgba(255,255,255,.07);
 }
 .mpoll-fill {
   height: 100%; width: 0; border-radius: 999px;
-  background: linear-gradient(90deg, var(--acc1, #fef08a), var(--acc2, #a16207), var(--acc3, #ffffff));
+  background: linear-gradient(90deg, var(--acc1, #fce68c), var(--acc2, #07a169), var(--acc3, #ffffff));
   transition: width .9s cubic-bezier(.22,.8,.3,1);
 }
-.mpoll-row.mine .mpoll-fill { box-shadow: 0 0 10px rgba(239, 155, 10,.45); }
+.mpoll-row.mine .mpoll-fill { box-shadow: 0 0 10px rgba(10,239,155,.45); }
 .mpoll-total {
   margin-top: .8rem; font-size: .85rem; color: var(--faint, #7f88a5);
 }
@@ -477,6 +477,58 @@ mini-poll { display: block; }
   .mpoll-body { padding: 0 1rem 1.1rem; }
   .mpoll-q { font-size: 1.02rem; }
 }
+/* --- layman example tiles: theme-gold pulse dot (distinct from amber anecdote dots) --- */
+.xtile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.25rem;margin:1.2rem 0;font-size:.94rem;line-height:1.65;color:var(--muted)}
+.xtile strong{color:var(--ink)}
+.xtile .xlead{font-weight:800;color:var(--sky)}
+.xdot{position:absolute;top:-7px;left:24px;width:13px;height:13px;border-radius:50%;background:var(--sky)}
+.xdot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--sky);animation:xdotPulse 2.2s ease-out infinite}
+@keyframes xdotPulse{0%{transform:scale(.6);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{transform:scale(1.25);opacity:0}}
+@media (prefers-reduced-motion: reduce){.xdot::after{animation:none;opacity:.35;transform:scale(.8)}}
+/* --- benefit tiers: three evidence levels, visually distinct, never equal --- */
+.tiers{display:grid;gap:1.2rem;margin-bottom:1.4rem}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem}
+.tier .tbadge{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  padding:.35rem .85rem;border-radius:999px;margin-bottom:.9rem}
+.tb1{background:rgba(10,239,155,.1);color:var(--amber);border:1px solid rgba(10,239,155,.4)}
+.tb2{background:rgba(252,230,140,.1);color:var(--sky);border:1px solid rgba(252,230,140,.4)}
+.tb3{background:rgba(249,207,40,.1);color:var(--rose);border:1px solid rgba(249,207,40,.4)}
+.tier h3{font-family:var(--disp);font-size:1.25rem;font-weight:800;margin-bottom:.6rem}
+.tier ul{list-style:none;display:grid;gap:.6rem;color:var(--muted);font-size:.97rem}
+.tier li{padding-left:1.4rem;position:relative}
+.tier li::before{content:"\25B8";position:absolute;left:0;color:var(--sky);font-weight:800}
+.tier li strong{color:var(--ink)}
+.tier .tnote{font-size:.85rem;color:var(--faint);margin-top:.8rem;font-style:italic}
+.fitnote{margin-top:1rem;font-size:.9rem;color:var(--faint);font-style:italic}
+
+
+.rate-h{text-align:center;font-family:var(--disp);font-size:1.45rem;font-weight:800;letter-spacing:-.01em;margin:0 auto 0;max-width:44rem}
+.rate-h .sub2{display:block;font-size:.92rem;font-weight:600;color:var(--muted);margin-top:.35rem;letter-spacing:0}
+.seqr4{animation:seqGlow 4.5s ease-in-out 2.7s infinite}
+.seqr5{animation:seqGlow 4.5s ease-in-out 3.6s infinite}
+.alegend{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;margin:0 0 1.2rem;font-size:.85rem;color:var(--muted)}
+.alegend .sw{display:inline-block;width:34px;height:0;border-top:3px solid #7fd08a;vertical-align:middle;margin-right:.45rem}
+.alegend .sw.dash{border-top:3px dashed var(--amber)}
+.pbanner{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);border:1px dashed rgba(10,239,155,.5);background:rgba(10,239,155,.08);padding:.32rem .75rem;border-radius:8px}
+.versus{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+@media(max-width:720px){.versus{grid-template-columns:1fr}}
+.vscol{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
+.vscol h4{font-family:var(--disp);font-size:1.15rem;font-weight:800;margin-bottom:.6rem}
+.vscol p,.vscol li{color:var(--muted);font-size:.96rem}
+.vscol ul{list-style:none;display:grid;gap:.55rem;margin-top:.6rem}
+.vscol li{padding-left:1.5rem;position:relative}
+.vscol li::before{content:"▸";position:absolute;left:0;color:var(--sky);font-weight:800}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+@media(max-width:720px){.duo{grid-template-columns:1fr}}
+.duo .do,.duo .dont{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
+.duo .do h4{color:#7fd08a;font-size:1.1rem;font-weight:800;margin-bottom:.6rem;font-family:var(--disp)}
+.duo .dont h4{color:var(--rose);font-size:1.1rem;font-weight:800;margin-bottom:.6rem;font-family:var(--disp)}
+.duo ul{list-style:none;display:grid;gap:.55rem;color:var(--muted);font-size:.96rem}
+.duo li{padding-left:1.5rem;position:relative}
+.duo li::before{position:absolute;left:0;font-weight:800}
+.duo .do li::before{content:"✓";color:#7fd08a}
+.duo .dont li::before{content:"✕";color:var(--rose)}
 
 </style>
 </head>
@@ -484,7 +536,7 @@ mini-poll { display: block; }
 <svg class="sr-only" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="triGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#a16207"/><stop offset="100%" stop-color="#ffffff"/>
+      <stop offset="0%" stop-color="#fce68c"/><stop offset="50%" stop-color="#07a169"/><stop offset="100%" stop-color="#ffffff"/>
     </linearGradient>
   </defs>
 </svg>
@@ -509,15 +561,18 @@ mini-poll { display: block; }
   <a href="#ch2"><span class="n">02</span>The Bioregulator Idea</a>
   <a href="#ch3"><span class="n">03</span>How It Might Work</a>
   <a href="#ch4"><span class="n">04</span>Evidence Check</a>
-  <a href="#ch5"><span class="n">05</span>What People Say</a>
-  <a href="#ch6"><span class="n">06</span>Risks & Unknowns</a>
-  <a href="#ch7"><span class="n">07</span>Glossary</a>
-  <a href="#ch8"><span class="n">08</span>Takeaways</a>
+  <a href="#ch5"><span class="n">05</span>Community Reports</a>
+  <a href="#ch6"><span class="n">06</span>Head-to-Head</a>
+  <a href="#ch7"><span class="n">07</span>Benefits</a>
+  <a href="#ch8"><span class="n">08</span>Fit Check</a>
+  <a href="#ch9"><span class="n">09</span>Risks & Unknowns</a>
+  <a href="#ch10"><span class="n">10</span>Glossary</a>
+  <a href="#ch11"><span class="n">11</span>Takeaways</a>
   <div class="mini"><span>Read</span><span id="tocPct">0%</span></div>
   <div class="mini-bar"><i id="tocBar"></i></div>
 </aside>
 <nav class="chapters" aria-label="Chapters"><div class="rail" id="rail">
-  <a href="#ch1">01 · Molecule</a><a href="#ch2">02 · Origins</a><a href="#ch3">03 · Mechanism</a><a href="#ch4">04 · Evidence</a><a href="#ch5">05 · Reports</a><a href="#ch6">06 · Risks</a><a href="#ch7">07 · Glossary</a><a href="#ch8">08 · Takeaways</a>
+  <a href="#ch1">01 · Molecule</a><a href="#ch2">02 · Origins</a><a href="#ch3">03 · Mechanism</a><a href="#ch4">04 · Evidence</a><a href="#ch5">05 · Community</a><a href="#ch6">06 · Compare</a><a href="#ch7">07 · Benefits</a><a href="#ch8">08 · Fit Check</a><a href="#ch9">09 · Risks</a><a href="#ch10">10 · Glossary</a><a href="#ch11">11 · Takeaways</a>
 </div></nav>
 
 <header class="hero">
@@ -535,7 +590,7 @@ mini-poll { display: block; }
     <div class="stat"><div class="num" data-count="0">0</div><div class="lbl">published human trials</div></div>
     <div class="stat"><div class="num" data-count="0">0</div><div class="lbl">regulatory approvals anywhere</div></div>
   </div>
-  <div class="scrollcue" aria-hidden="true">scroll ↓</div>
+  <div class="scroll-hint" aria-hidden="true">scroll ↓</div>
 </header>
 
 <main class="wrap">
@@ -547,8 +602,8 @@ mini-poll { display: block; }
   <p class="lede">Three amino acids. That's it — <strong>the smallest molecule on this site</strong>. Pinealon (Glu-Asp-Arg) belongs to Russia's "bioregulator" family: short peptides claimed to <strong>tune specific organs</strong> — this one, the brain.</p>
   <div class="diagram reveal">
     <svg viewBox="0 0 260 196" role="img" aria-label="Three amino acid beads: glutamate, aspartate, arginine">
-      <text x="20" y="24" fill="#a9b1c9" font-size="13" font-weight="700" letter-spacing="2">PINEALON · 3 AMINO ACIDS · Glu-Asp-Arg</text>
-      <line x1="92" y1="66" x2="110" y2="66" stroke="#3a4160" stroke-width="3"/><line x1="150" y1="66" x2="168" y2="66" stroke="#3a4160" stroke-width="3"/><circle cx="72" cy="66" r="20" fill="#a16207" stroke="#fef08a" stroke-width="2.5"/><text x="72" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">E</text><circle cx="130" cy="66" r="20" fill="#a16207" stroke="#fef08a" stroke-width="2.5"/><text x="130" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">D</text><circle cx="188" cy="66" r="20" fill="#a16207" stroke="#fef08a" stroke-width="2.5"/><text x="188" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">R</text><path d="M46 106 h168" stroke="#fef08a" stroke-width="2.5" fill="none"/><path d="M46 106 v-8 M214 106 v-8" stroke="#fef08a" stroke-width="2.5"/><text x="130" y="130" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="800">EDR — the whole molecule</text><text x="130" y="148" text-anchor="middle" fill="#7f88a5" font-size="11">brain-targeted (claimed)</text>
+      <text x="130" y="24" text-anchor="middle" fill="#a9b1c9" font-size="13" font-weight="700" letter-spacing="2">PINEALON · 3 AMINO ACIDS</text>
+      <line x1="92" y1="66" x2="110" y2="66" stroke="#3a4160" stroke-width="3"/><line x1="150" y1="66" x2="168" y2="66" stroke="#3a4160" stroke-width="3"/><circle cx="72" cy="66" r="20" fill="#07a169" stroke="#fce68c" stroke-width="2.5"/><text x="72" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">E</text><circle cx="130" cy="66" r="20" fill="#07a169" stroke="#fce68c" stroke-width="2.5"/><text x="130" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">D</text><circle cx="188" cy="66" r="20" fill="#07a169" stroke="#fce68c" stroke-width="2.5"/><text x="188" y="72" text-anchor="middle" fill="#0a0c14" font-size="14" font-weight="800">R</text><path d="M46 106 h168" stroke="#fce68c" stroke-width="2.5" fill="none"/><path d="M46 106 v-8 M214 106 v-8" stroke="#fce68c" stroke-width="2.5"/><text x="130" y="130" text-anchor="middle" fill="#fce68c" font-size="12" font-weight="800">EDR — the whole molecule</text><text x="130" y="148" text-anchor="middle" fill="#7f88a5" font-size="11">brain-targeted (claimed)</text>
       <text x="130" y="190" fill="#7f88a5" font-size="12" text-anchor="middle">One of the Khavinson "cytogen" bioregulators.</text>
     </svg>
     <div class="cap">Each bead is one amino acid. Three beads, one claimed address: the brain.</div>
@@ -570,13 +625,45 @@ mini-poll { display: block; }
   <h2>The <span class="hl">bioregulator</span> idea</h2>
   <p class="lede">Pinealon doesn't come from a drug company — it comes from a <strong>theory of aging</strong>: that short peptides are the body's own organ-tuning signals, and that replacing them slows decline.</p>
   <div class="diagram reveal">
-    <svg viewBox="0 0 640 216" role="img" aria-label="Timeline of the bioregulator program from organ extracts to Pinealon"><rect x="40" y="102" width="560" height="4" rx="2" fill="#3a4160"/><circle cx="56" cy="104" r="16" fill="none" stroke="#fef08a" stroke-width="2" class="ringp"/><circle cx="56" cy="104" r="8" fill="#fef08a"/><text x="56" y="52" text-anchor="middle" fill="#fef08a" font-size="13" font-weight="800">1970s</text><text x="56" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Organ extracts</text><text x="56" y="160" text-anchor="middle" fill="#7f88a5" font-size="10.5">Khavinson isolates peptide</text><text x="56" y="176" text-anchor="middle" fill="#7f88a5" font-size="10.5">complexes from animal organs</text><circle cx="188" cy="104" r="16" fill="none" stroke="#a16207" stroke-width="2" class="ringp"/><circle cx="188" cy="104" r="8" fill="#a16207"/><text x="188" y="52" text-anchor="middle" fill="#a16207" font-size="13" font-weight="800">1980s</text><text x="188" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Cytomedines</text><text x="188" y="160" text-anchor="middle" fill="#7f88a5" font-size="10.5">Natural peptide mixtures studied</text><text x="188" y="176" text-anchor="middle" fill="#7f88a5" font-size="10.5">for organ-specific effects</text><circle cx="320" cy="104" r="16" fill="none" stroke="#fef08a" stroke-width="2" class="ringp"/><circle cx="320" cy="104" r="8" fill="#fef08a"/><text x="320" y="52" text-anchor="middle" fill="#fef08a" font-size="13" font-weight="800">1990s</text><text x="320" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Cytogens</text><text x="320" y="160" text-anchor="middle" fill="#7f88a5" font-size="10.5">Single short peptides (2–4</text><text x="320" y="176" text-anchor="middle" fill="#7f88a5" font-size="10.5">amino acids) synthesized</text><circle cx="452" cy="104" r="16" fill="none" stroke="#a16207" stroke-width="2" class="ringp"/><circle cx="452" cy="104" r="8" fill="#a16207"/><text x="452" y="52" text-anchor="middle" fill="#a16207" font-size="13" font-weight="800">2000s</text><text x="452" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Pinealon defined</text><text x="452" y="160" text-anchor="middle" fill="#7f88a5" font-size="10.5">EDR described as the</text><text x="452" y="176" text-anchor="middle" fill="#7f88a5" font-size="10.5">brain-targeted tripeptide</text><circle cx="584" cy="104" r="16" fill="none" stroke="#fef08a" stroke-width="2" class="ringp"/><circle cx="584" cy="104" r="8" fill="#fef08a"/><text x="584" y="52" text-anchor="middle" fill="#fef08a" font-size="13" font-weight="800">2010s</text><text x="584" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Supplement era</text><text x="584" y="160" text-anchor="middle" fill="#7f88a5" font-size="10.5">Bioregulators sold worldwide;</text><text x="584" y="176" text-anchor="middle" fill="#7f88a5" font-size="10.5">evidence stays Russian</text></svg>
+    <svg viewBox="0 0 700 216" role="img" aria-label="Timeline of the bioregulator program from organ extracts to Pinealon"><rect x="40" y="102" width="620" height="4" rx="2" fill="#3a4160"/><circle cx="70" cy="104" r="16" fill="none" stroke="#fce68c" stroke-width="2" class="ringp"/><circle cx="70" cy="104" r="8" fill="#fce68c"/><text x="70" y="52" text-anchor="middle" fill="#fce68c" font-size="13" font-weight="800">1970s</text><text x="70" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Organ extracts</text><text x="70" y="160" text-anchor="middle" fill="#7f88a5" font-size="10">isolates peptide</text><text x="70" y="176" text-anchor="middle" fill="#7f88a5" font-size="10">complexes from organs</text><circle cx="210" cy="104" r="16" fill="none" stroke="#07a169" stroke-width="2" class="ringp"/><circle cx="210" cy="104" r="8" fill="#07a169"/><text x="210" y="52" text-anchor="middle" fill="#07a169" font-size="13" font-weight="800">1980s</text><text x="210" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Cytomedines</text><text x="210" y="160" text-anchor="middle" fill="#7f88a5" font-size="10">peptide mixtures</text><text x="210" y="176" text-anchor="middle" fill="#7f88a5" font-size="10">organ-specific effects</text><circle cx="350" cy="104" r="16" fill="none" stroke="#fce68c" stroke-width="2" class="ringp"/><circle cx="350" cy="104" r="8" fill="#fce68c"/><text x="350" y="52" text-anchor="middle" fill="#fce68c" font-size="13" font-weight="800">1990s</text><text x="350" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Cytogens</text><text x="350" y="160" text-anchor="middle" fill="#7f88a5" font-size="10">short peptides (2–4 aa)</text><text x="350" y="176" text-anchor="middle" fill="#7f88a5" font-size="10">synthesized</text><circle cx="490" cy="104" r="16" fill="none" stroke="#07a169" stroke-width="2" class="ringp"/><circle cx="490" cy="104" r="8" fill="#07a169"/><text x="490" y="52" text-anchor="middle" fill="#07a169" font-size="13" font-weight="800">2000s</text><text x="490" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Pinealon defined</text><text x="490" y="160" text-anchor="middle" fill="#7f88a5" font-size="10">EDR as the brain-</text><text x="490" y="176" text-anchor="middle" fill="#7f88a5" font-size="10">targeted tripeptide</text><circle cx="630" cy="104" r="16" fill="none" stroke="#fce68c" stroke-width="2" class="ringp"/><circle cx="630" cy="104" r="8" fill="#fce68c"/><text x="630" y="52" text-anchor="middle" fill="#fce68c" font-size="13" font-weight="800">2010s</text><text x="630" y="142" text-anchor="middle" fill="#edf0f9" font-size="12" font-weight="800">Supplement era</text><text x="630" y="160" text-anchor="middle" fill="#7f88a5" font-size="10">sold worldwide;</text><text x="630" y="176" text-anchor="middle" fill="#7f88a5" font-size="10">evidence stays Russian</text></svg>
     <div class="cap">From organ extracts to three-letter synthetics: the bioregulator pipeline.</div>
   </div>
   <div class="kv reveal"><span class="k s">The core claim</span><p>Short peptides <strong>regulate gene expression</strong> in specific tissues — switching the right genes on or off as we age. That's the entire bioregulator thesis in one sentence.</p></div>
   <div class="kv reveal"><span class="k t">Cytomedine → cytogen</span><p>First came <strong>natural extracts</strong> (messy mixtures from organs), then <strong>synthetic short peptides</strong> like Pinealon — the defined, reproducible version of the idea.</p></div>
   <div class="kv reveal"><span class="k o">A theory, not a consensus</span><p><strong>Western molecular biology doesn't endorse</strong> the organ-homing peptide model. The theory lives almost entirely inside the Khavinson school.</p></div>
   <div class="plain reveal"><div class="plabel">Plain English</div><p>Bioregulators are a <strong>parallel biology</strong>: a whole Russian research tradition with its own journals, conferences, and true believers — largely invisible to Western science. Pinealon is one of its purest expressions: maximum theory, minimum outside verification.</p></div>
+
+  <div class="panel reveal">
+    <h3>Why is Pinealon associated with the pineal gland?</h3>
+    <p>Mostly by <strong>naming convention</strong>: the bioregulator school labels each peptide after its claimed target organ. The pineal gland is a real, tiny brain structure tied to <strong>circadian rhythm</strong> — but the name is an address claim, not a delivery route.</p>
+    <div class="diagram reveal">
+      <svg viewBox="0 0 640 300" role="img" aria-label="Brain cross-section with pineal gland and the circadian pathway">
+        <ellipse cx="190" cy="150" rx="145" ry="100" fill="#10162e" stroke="#07a169" stroke-width="2"/>
+        <text x="190" y="62" text-anchor="middle" fill="#7f88a5" font-size="11" font-weight="700" letter-spacing="2">BRAIN · CROSS-SECTION</text>
+        <circle cx="190" cy="205" r="11" fill="#fce68c" class="glow-pulse"/>
+        <text x="190" y="240" text-anchor="middle" fill="#fce68c" font-size="11" font-weight="800">PINEAL GLAND</text>
+        <text x="190" y="256" text-anchor="middle" fill="#7f88a5" font-size="10">deep brain · pea-sized</text>
+        <rect x="392" y="24" width="228" height="36" rx="10" fill="#10162e" stroke="#7fd08a" stroke-width="1.8"/>
+        <text x="506" y="47" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">DAYLIGHT</text>
+        <path d="M506 60 L506 78" stroke="#7fd08a" stroke-width="2.5" fill="none"/>
+        <rect x="392" y="78" width="228" height="36" rx="10" fill="#10162e" stroke="#7fd08a" stroke-width="1.8"/>
+        <text x="506" y="101" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">RETINA · EYES</text>
+        <path d="M506 114 L506 132" stroke="#7fd08a" stroke-width="2.5" fill="none"/>
+        <rect x="392" y="132" width="228" height="36" rx="10" fill="#10162e" stroke="#7fd08a" stroke-width="1.8"/>
+        <text x="506" y="155" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">SCN — THE BRAIN CLOCK</text>
+        <path d="M506 168 L506 186" stroke="#7fd08a" stroke-width="2.5" fill="none"/>
+        <rect x="392" y="186" width="228" height="36" rx="10" fill="#10162e" stroke="#7fd08a" stroke-width="1.8"/>
+        <text x="506" y="209" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">PINEAL GLAND</text>
+        <path d="M506 222 L506 240" stroke="#7fd08a" stroke-width="2.5" fill="none"/>
+        <rect x="392" y="240" width="228" height="36" rx="10" fill="#10162e" stroke="#7fd08a" stroke-width="1.8"/>
+        <text x="506" y="263" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">MELATONIN · NIGHT</text>
+        <text x="506" y="292" text-anchor="middle" fill="#7f88a5" font-size="10">solid arrows = established biology</text>
+      </svg>
+      <div class="cap">Established: the light → melatonin pathway. Experimental: any direct Pinealon → melatonin link.</div>
+    </div>
+    <div class="kv reveal"><span class="k a">What the name doesn't mean</span><p><strong>Pinealon is not melatonin</strong>, and nothing here shows a peptide flying from an injection site into the pineal gland. The name says where it's <em>claimed</em> to act — not how it gets there.</p></div>
+    <div class="kv reveal"><span class="k s">The melatonin distinction</span><p>The circadian pathway above is <strong>established physiology</strong>. Any claim that Pinealon influences melatonin is <strong>experimental</strong> and must be identified as such — never animated as "boosting melatonin."</p></div>
+  </div>
 </section>
 <mini-poll slug="pinealon-mini-ch2"
   data-question="Organ-targeted peptides — intriguing theory or pseudoscience?"
@@ -588,15 +675,87 @@ mini-poll { display: block; }
   <h2>How it's <span class="hl">supposed</span> to work</h2>
   <p class="lede">The proposed mechanism is <strong>elegant and almost entirely theoretical</strong>: a three-letter key that unlocks brain-specific gene programs. Here's the story as its proponents tell it.</p>
   <div class="diagram reveal">
-    <svg viewBox="0 0 640 240" role="img" aria-label="Four proposed mechanisms: reaching the brain, gene tuning, neuron protection, sharper circuits"><rect x="20" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#fef08a" stroke-width="2"/><text x="84" y="102" text-anchor="middle" fill="#fef08a" font-size="12.5" font-weight="800">REACH THE BRAIN</text><text x="84" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Small and stable —</text><text x="84" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">circulates well (claimed)</text><path d="M148 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq" stroke-dasharray="6 6"/><rect x="172" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#a16207" stroke-width="2"/><text x="236" y="102" text-anchor="middle" fill="#a16207" font-size="12.5" font-weight="800">FIND THE GENES</text><text x="236" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Binds DNA regions —</text><text x="236" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">tuning neuronal genes</text><path d="M300 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq2" stroke-dasharray="6 6"/><rect x="324" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#fef08a" stroke-width="2"/><text x="388" y="102" text-anchor="middle" fill="#fef08a" font-size="12.5" font-weight="800">PROTECT NEURONS</text><text x="388" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Antioxidant defenses,</text><text x="388" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">less cell death</text><path d="M452 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq3" stroke-dasharray="6 6"/><rect x="476" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#a16207" stroke-width="2"/><text x="540" y="102" text-anchor="middle" fill="#a16207" font-size="12.5" font-weight="800">SHARPER CIRCUITS</text><text x="540" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Memory and learning</text><text x="540" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">support (claimed)</text>
+    <svg viewBox="0 0 640 240" role="img" aria-label="Four proposed mechanisms: reaching the brain, gene tuning, neuron protection, sharper circuits"><rect x="20" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#fce68c" stroke-width="2"/><text x="84" y="102" text-anchor="middle" fill="#fce68c" font-size="12.5" font-weight="800">REACH THE BRAIN</text><text x="84" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Small and stable —</text><text x="84" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">circulates well (claimed)</text><path d="M148 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq" stroke-dasharray="6 6"/><rect x="172" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#07a169" stroke-width="2"/><text x="236" y="102" text-anchor="middle" fill="#07a169" font-size="12.5" font-weight="800">FIND THE GENES</text><text x="236" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Binds DNA regions —</text><text x="236" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">tuning neuronal genes</text><path d="M300 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq2" stroke-dasharray="6 6"/><rect x="324" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#fce68c" stroke-width="2"/><text x="388" y="102" text-anchor="middle" fill="#fce68c" font-size="12.5" font-weight="800">PROTECT NEURONS</text><text x="388" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Antioxidant defenses,</text><text x="388" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">less cell death</text><path d="M452 120 h24" stroke="#7f88a5" stroke-width="2" fill="none" class="flowseq3" stroke-dasharray="6 6"/><rect x="476" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#07a169" stroke-width="2"/><text x="540" y="102" text-anchor="middle" fill="#07a169" font-size="12.5" font-weight="800">SHARPER CIRCUITS</text><text x="540" y="128" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">Memory and learning</text><text x="540" y="144" text-anchor="middle" fill="#a9b1c9" font-size="11" font-weight="600">support (claimed)</text>
       <text x="320" y="220" fill="#7f88a5" font-size="12" text-anchor="middle">The proposed chain — elegant, specific, and mostly asserted rather than measured.</text>
     </svg>
     <div class="cap">A three-letter password that tells brain cells to act young again — in theory.</div>
   </div>
-  <div class="ebar"><div class="row"><span class="t">Neuroprotection (animals/cells)</span><span class="v">early signal</span></div><div class="track"><div class="fill" style="--w:50%;background:linear-gradient(90deg,#a16207,#fef08a)"></div></div><div class="note">Some Russian studies report protected neurons and better learning in animals. Small, single-network.</div></div>
-  <div class="ebar"><div class="row"><span class="t">Gene-regulation mechanism</span><span class="v">proposed</span></div><div class="track"><div class="fill" style="--w:25%;background:linear-gradient(90deg,#fef08a,#422006)"></div></div><div class="note">The DNA-binding model is the school's thesis — not demonstrated for Pinealon by independent labs.</div></div>
-  <div class="ebar"><div class="row"><span class="t">Human data</span><span class="v">essentially none</span></div><div class="track"><div class="fill" style="--w:5%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">No published human trials found; human claims are extrapolated or anecdotal.</div></div>
-  <div class="ebar"><div class="row"><span class="t">Independent replication</span><span class="v">none found</span></div><div class="track"><div class="fill" style="--w:3%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">Outside the Khavinson network, Pinealon is nearly invisible in the literature.</div></div>
+
+  <div class="diagram reveal">
+    <svg viewBox="0 0 640 400" role="img" aria-label="Proposed Pinealon journey through cellular compartments">
+      <text x="320" y="24" text-anchor="middle" fill="#0aef9b" font-size="12.5" font-weight="800" letter-spacing="2.5">PROPOSED MECHANISM — UNVERIFIED</text>
+      <rect x="8" y="44" width="54" height="296" rx="10" fill="#10162e" stroke="#3a4160" stroke-width="1.5"/>
+      <text x="35" y="192" text-anchor="middle" fill="#7f88a5" font-size="10" font-weight="800" letter-spacing="1" transform="rotate(-90 35 192)">EXTRACELLULAR</text>
+      <rect x="62" y="44" width="12" height="296" fill="#07a169" rx="3"/>
+      <text x="68" y="362" text-anchor="middle" fill="#a9b1c9" font-size="10" font-weight="700">MEMBRANE</text>
+      <rect x="74" y="44" width="252" height="296" rx="10" fill="none" stroke="#3a4160" stroke-width="1.5"/>
+      <text x="200" y="362" text-anchor="middle" fill="#7f88a5" font-size="10.5" font-weight="700" letter-spacing="1">CYTOPLASM</text>
+      <circle cx="478" cy="192" r="104" fill="#0d1226" stroke="#fce68c" stroke-width="2"/>
+      <circle cx="478" cy="192" r="114" fill="none" stroke="#fce68c" stroke-width="1.2" opacity="0.45"/>
+      <text x="478" y="66" text-anchor="middle" fill="#7f88a5" font-size="10" font-weight="600">nuclear envelope (double ring)</text>
+      <text x="478" y="362" text-anchor="middle" fill="#7f88a5" font-size="10.5" font-weight="700" letter-spacing="1">NUCLEUS · DNA / CHROMATIN</text>
+      <path d="M398 140 q19 -13 38 0 t38 0 t38 0 t38 0" stroke="#fce68c" stroke-width="2" fill="none" opacity="0.65"/>
+      <path d="M398 192 q19 -13 38 0 t38 0 t38 0 t38 0" stroke="#fce68c" stroke-width="2" fill="none" opacity="0.65"/>
+      <path d="M398 244 q19 -13 38 0 t38 0 t38 0 t38 0" stroke="#fce68c" stroke-width="2" fill="none" opacity="0.65"/>
+      <rect x="432" y="176" width="92" height="32" rx="10" fill="none" stroke="#0aef9b" stroke-width="2" stroke-dasharray="5 4" class="glow-pulse"/>
+      <text x="478" y="226" text-anchor="middle" fill="#0aef9b" font-size="10" font-weight="700">proposed promoter-region contact</text>
+      <path d="M35 280 L478 280" stroke="#0aef9b" stroke-width="2.5" fill="none" stroke-dasharray="6 6" class="flowseq"/>
+      <g class="seqr1"><circle cx="35" cy="252" r="12" fill="#0d1226" stroke="#7f88a5" stroke-width="2"/><text x="35" y="257" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">1</text></g>
+      <g class="seqr2"><circle cx="68" cy="252" r="12" fill="#0d1226" stroke="#7f88a5" stroke-width="2"/><text x="68" y="257" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">2</text></g>
+      <g class="seqr3"><circle cx="200" cy="252" r="12" fill="#0d1226" stroke="#7f88a5" stroke-width="2"/><text x="200" y="257" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">3</text></g>
+      <g class="seqr4"><circle cx="392" cy="252" r="12" fill="#0d1226" stroke="#7f88a5" stroke-width="2"/><text x="392" y="257" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">4</text></g>
+      <g class="seqr5"><circle cx="470" cy="252" r="12" fill="#0d1226" stroke="#0aef9b" stroke-width="2"/><text x="470" y="257" text-anchor="middle" fill="#edf0f9" font-size="11" font-weight="800">5</text></g>
+      <g>
+        <circle r="10" fill="#07a169" stroke="#fce68c" stroke-width="2"/>
+        <text y="4" text-anchor="middle" fill="#0a0c14" font-size="10" font-weight="800">E</text>
+        <animateMotion dur="5s" repeatCount="indefinite" path="M20,280 L466,280"/>
+      </g>
+      <g>
+        <circle r="10" fill="#07a169" stroke="#fce68c" stroke-width="2"/>
+        <text y="4" text-anchor="middle" fill="#0a0c14" font-size="10" font-weight="800">D</text>
+        <animateMotion dur="5s" begin="-1.7s" repeatCount="indefinite" path="M20,280 L466,280"/>
+      </g>
+      <g>
+        <circle r="10" fill="#07a169" stroke="#fce68c" stroke-width="2"/>
+        <text y="4" text-anchor="middle" fill="#0a0c14" font-size="10" font-weight="800">R</text>
+        <animateMotion dur="5s" begin="-3.4s" repeatCount="indefinite" path="M20,280 L466,280"/>
+      </g>
+    </svg>
+    <div class="cap"><strong style="color:#0aef9b">1</strong> peptide approaches · <strong style="color:#0aef9b">2</strong> proposed membrane entry · <strong style="color:#0aef9b">3</strong> cytoplasm transit · <strong style="color:#0aef9b">4</strong> proposed nuclear access · <strong style="color:#0aef9b">5</strong> proposed chromatin contact. Every step past access is proposed — intact delivery to human brain cells is not established.</div>
+    <div class="alegend"><span><span class="sw dash"></span>dashed = proposed / hypothesized</span><span><span class="sw"></span>solid = demonstrated finding</span></div>
+  </div>
+  <div class="diagram reveal">
+    <svg viewBox="0 0 640 180" role="img" aria-label="Proposed sequence from peptide access to cellular response">
+      <text x="320" y="20" text-anchor="middle" fill="#7f88a5" font-size="11" font-weight="700" letter-spacing="2">THE PROPOSED SEQUENCE</text>
+      <rect x="8" y="44" width="112" height="100" rx="12" fill="#10162e" stroke="#7fd08a" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="64" y="82" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">PEPTIDE</text>
+      <text x="64" y="98" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">ACCESS</text>
+      <path d="M120 94 h14" stroke="#0aef9b" stroke-width="2.5" stroke-dasharray="6 6" class="flowseq"/>
+      <rect x="134" y="44" width="112" height="100" rx="12" fill="#10162e" stroke="#0aef9b" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="190" y="74" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">PROPOSED DNA /</text>
+      <text x="190" y="90" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">CHROMATIN</text>
+      <text x="190" y="106" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">INTERACTION</text>
+      <path d="M246 94 h14" stroke="#0aef9b" stroke-width="2.5" stroke-dasharray="6 6" class="flowseq2"/>
+      <rect x="260" y="44" width="112" height="100" rx="12" fill="#10162e" stroke="#0aef9b" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="316" y="82" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">ALTERED</text>
+      <text x="316" y="98" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">TRANSCRIPTION</text>
+      <path d="M372 94 h14" stroke="#0aef9b" stroke-width="2.5" stroke-dasharray="6 6" class="flowseq3"/>
+      <rect x="386" y="44" width="112" height="100" rx="12" fill="#10162e" stroke="#0aef9b" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="442" y="74" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">ALTERED PROTEIN</text>
+      <text x="442" y="90" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">PRODUCTION</text>
+      <path d="M498 94 h14" stroke="#0aef9b" stroke-width="2.5" stroke-dasharray="6 6" class="flowseq"/>
+      <rect x="512" y="44" width="112" height="100" rx="12" fill="#10162e" stroke="#0aef9b" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="568" y="74" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">DOWNSTREAM</text>
+      <text x="568" y="90" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">CELLULAR</text>
+      <text x="568" y="106" text-anchor="middle" fill="#edf0f9" font-size="10.5" font-weight="800">RESPONSE</text>
+      <text x="320" y="168" text-anchor="middle" fill="#7f88a5" font-size="11">Near chromatin and promoter regions — never cutting DNA, never rewriting genes.</text>
+    </svg>
+    <div class="cap">One promoter region at a time — not dozens of genes switching on at once.</div>
+  </div>
+  <div class="ebar reveal"><div class="row"><span class="t">Neuroprotection (animals/cells)</span><span class="v">early signal</span></div><div class="track"><div class="fill" style="--w:50%;background:linear-gradient(90deg,#07a169,#fce68c)"></div></div><div class="note">Some Russian studies report protected neurons and better learning in animals. Small, single-network.</div></div>
+  <div class="ebar reveal"><div class="row"><span class="t">Gene-regulation mechanism</span><span class="v">proposed</span></div><div class="track"><div class="fill" style="--w:25%;background:linear-gradient(90deg,#fce68c,#06422c)"></div></div><div class="note">The DNA-binding model is the school's thesis — not demonstrated for Pinealon by independent labs.</div></div>
+  <div class="ebar reveal"><div class="row"><span class="t">Human data</span><span class="v">essentially none</span></div><div class="track"><div class="fill" style="--w:5%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">No published human trials found; human claims are extrapolated or anecdotal.</div></div>
+  <div class="ebar reveal"><div class="row"><span class="t">Independent replication</span><span class="v">none found</span></div><div class="track"><div class="fill" style="--w:3%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">Outside the Khavinson network, Pinealon is nearly invisible in the literature.</div></div>
   <div class="plain reveal"><div class="plabel">Plain English</div><p>The pitch: <strong>a three-letter password that tells brain cells to act young again</strong>. It's a beautiful story — the kind that needs extraordinary evidence, and currently has almost none.</p></div>
 </section>
 <mini-poll slug="pinealon-mini-ch3"
@@ -613,6 +772,15 @@ mini-poll { display: block; }
     <div class="card teal reveal"><h3>No human trials</h3><p><strong>No published human studies</strong> of Pinealon found. Every human claim about it is extrapolation, marketing, or anecdote.</p></div>
     <div class="card org reveal"><h3>Theory-heavy, data-light</h3><p>The bioregulator model is <strong>internally consistent and externally unverified</strong> — a complete worldview with very few bridges to mainstream neuroscience.</p></div>
   </div>
+
+  <div class="panel reveal">
+    <h3>What the research shows — lane by lane</h3>
+    <div class="ebar reveal"><div class="row"><span class="t">Oxidative-stress models</span><span class="v">cell &amp; animal reports</span></div><div class="track"><div class="fill" style="--w:55%;background:linear-gradient(90deg,#07a169,#fce68c)"></div></div><div class="note">The strongest reported signal: protected cells under oxidative stress.</div></div>
+    <div class="ebar reveal"><div class="row"><span class="t">Neuronal &amp; cellular studies</span><span class="v">early, single-school</span></div><div class="track"><div class="fill" style="--w:40%;background:linear-gradient(90deg,#07a169,#fce68c)"></div></div><div class="note">Neuron-protection claims in dish and tissue models.</div></div>
+    <div class="ebar reveal"><div class="row"><span class="t">Animal research</span><span class="v">small studies</span></div><div class="track"><div class="fill" style="--w:35%;background:linear-gradient(90deg,#07a169,#fce68c)"></div></div><div class="note">Learning/memory hints in rodents — modest, unreplicated.</div></div>
+    <div class="ebar reveal"><div class="row"><span class="t">Human evidence</span><span class="v">essentially none</span></div><div class="track"><div class="fill" style="--w:5%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">No published controlled human studies.</div></div>
+    <div class="ebar reveal"><div class="row"><span class="t">Independent replication</span><span class="v">the gap</span></div><div class="track"><div class="fill" style="--w:3%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">The published Pinealon literature is heavily concentrated within one research group — independent replication is scarce.</div></div>
+  </div>
   <div class="plain reveal"><div class="plabel">Plain English</div><p>Pinealon is <strong>all map, no territory</strong>: a detailed theory of how it should work, with barely any measurements of it actually working. Buying in means buying the whole bioregulator worldview — not just one peptide.</p></div>
 </section>
 <mini-poll slug="pinealon-mini-ch4"
@@ -621,9 +789,9 @@ mini-poll { display: block; }
 </mini-poll>
 <!-- ============ CHAPTER 5 ============ -->
 <section class="chapter" id="ch5">
-  <span class="eyebrow"><span class="n">05</span>What people say</span>
-  <h2>Reports from the <span class="hl">wild</span></h2>
-  <p class="lede">Pinealon threads are <strong>whisper-quiet</strong> compared to nootropic forums — fewer reports, softer claims, more uncertainty. Paraphrased recurring themes, all unverified.</p>
+  <span class="eyebrow"><span class="n">05</span>Community reports</span>
+  <h2>Community <span class="hl">reports</span></h2>
+  <p class="lede">Pinealon threads across <strong>Reddit, forums, TikTok, and YouTube Shorts</strong> are <strong>whisper-quiet</strong> compared to nootropic forums — fewer reports, softer claims, more uncertainty. Paraphrased recurring themes below; every one is an <strong>unverified story, not data</strong> — kept strictly separate from the evidence chapters above.</p>
   <div class="ulegend reveal"><span class="udot" role="img" aria-label="Unverified anecdote"></span><p><strong>Unverified anecdote</strong> — the pulsing dot marks a paraphrased recurring theme from forums and social media: not verified, not evidence.</p></div>
   <div class="anec-grid">
     <div class="anec reveal"><div class="anec-head"><h4>Clearer mornings</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>"Felt like mental static turned down a notch." <strong>Caveat:</strong> "clarity" is the vaguest outcome in nootropics.</p><div class="caveat">Pattern: subtle clarity is the signature report.</div></div>
@@ -636,99 +804,208 @@ mini-poll { display: block; }
   <div class="folk-note reveal"><p>Read these as <strong>mood notes from a small, devoted scene</strong>, not as evidence of anything. The signal in the noise: even the believers describe effects as subtle — which is either honesty or the absence of an effect.</p></div>
 </section>
 <mini-poll slug="pinealon-mini-ch5"
-  data-question="“Mental static turned down” — how do you read these reports?" data-answers='[["💬","Encouraging"],["🧂","Salt required"],["🚫","Placebo-prone"],["⚖️","Stories aren&#39;t data"]]'>
+  data-question="Which community-report pattern stands out to you?" data-answers='[["💬","Clearer mornings"],["🧂","Salt required"],["🚫","Quiet exits"],["⚖️","Stories aren&#39;t data"]]'>
 </mini-poll>
 <!-- ============ CHAPTER 6 ============ -->
 <section class="chapter" id="ch6">
-  <span class="eyebrow"><span class="n">06</span>Risks & unknowns</span>
+  <span class="eyebrow"><span class="n">06</span>Head-to-head</span>
+  <h2>Pinealon vs <span class="hl">conventional</span> approaches</h2>
+  <p class="lede">Mechanism against mechanism, evidence against evidence. <strong>No winner is declared</strong> — this is a contrast, not a contest.</p>
+  <div class="cmp">
+    <div class="card sky reveal"><h3>Pinealon</h3><div class="sub2">proposed bioregulator</div>
+      <ul>
+        <li><strong>Mechanism:</strong> proposed organ-targeted gene regulation</li>
+        <li><strong>Evidence:</strong> lab + animal work, one research school</li>
+        <li><strong>Human data:</strong> none published</li>
+      </ul></div>
+    <div class="card teal reveal"><h3>Established sleep science</h3><div class="sub2">circadian biology</div>
+      <ul>
+        <li><strong>Mechanism:</strong> light → brain clock → melatonin; mapped receptors</li>
+        <li><strong>Evidence:</strong> extensive, independently replicated</li>
+        <li><strong>Human data:</strong> large trials exist</li>
+      </ul></div>
+    <div class="card org reveal"><h3>Mainstream neuroprotection</h3><div class="sub2">research approaches</div>
+      <ul>
+        <li><strong>Mechanism:</strong> studied pathways — antioxidant, vascular, activity-linked</li>
+        <li><strong>Evidence:</strong> mixed but broad and independent</li>
+        <li><strong>Human data:</strong> trials with real endpoints</li>
+      </ul></div>
+  </div>
+  <div class="duo reveal">
+    <div class="do"><h4>✓ What it does</h4>
+      <ul>
+        <li>Exists as a defined tripeptide (Glu-Asp-Arg)</li>
+        <li>Has been studied in oxidative-stress and neuronal cell/animal models</li>
+        <li>Proposes an interesting — and unverified — gene-regulation idea</li>
+      </ul></div>
+    <div class="dont"><h4>✕ What it doesn't prove</h4>
+      <ul>
+        <li>Better memory or cognition in humans</li>
+        <li>Improved sleep or a melatonin effect</li>
+        <li>Neuroprotection or longevity in people</li>
+        <li>Reversing brain aging</li>
+      </ul></div>
+  </div>
+  <div class="plain reveal"><div class="plabel">Plain English</div><p>Compare the <strong>idea</strong> (elegant, tiny, specific) with the <strong>receipts</strong> (thin, single-school, no human trials) — and keep both visible at once.</p></div>
+</section>
+<mini-poll slug="pinealon-mini-ch6"
+  data-question="Which approach earns your trust?"
+  data-answers='[["😴","Established sleep science"],["🧠","Neuroprotection research"],["🧬","Bioregulator idea"],["⚖️","None yet"]]'>
+</mini-poll>
+<!-- ============ CHAPTER 7 · POTENTIAL BENEFITS ============ -->
+<section class="chapter" id="ch7">
+  <span class="eyebrow"><span class="n">07</span>Potential benefits</span>
+  <h2>Potential <span class="hl">benefits</span> — sorted by evidence</h2>
+  <p class="lede">Pinealon’s evidence file is <strong>the thinnest on this site</strong> — so the benefit tiers below are brutally honest. What’s measured, what’s merely proposed, and what the community whispers.</p>
+  <div class="tiers">
+    <div class="tier reveal">
+      <span class="tbadge tb1">Tier 1 · Established — minimal, say so</span>
+      <h3>What the research actually measured</h3>
+      <ul>
+        <li><strong>A defined tripeptide (Glu-Asp-Arg)</strong> — the identity is established chemistry, not a claim.</li>
+        <li><strong>Neuroprotective hints in animal and cell models</strong> — some Russian studies report protected neurons under oxidative stress and better maze learning. Small studies, one research tradition. The strongest reported signal — still preclinical.</li>
+        <li><strong>No established human benefit exists.</strong> No published human trials found; every human claim is extrapolation, marketing, or anecdote.</li>
+      </ul>
+      <div class="xtile"><span class="xdot" aria-hidden="true"></span><p><span class="xlead">Think of it this way:</span> the benefit case for Pinealon is a <strong>beautiful architectural drawing</strong> — the building itself hasn’t been built, and only one firm has ever drawn it.</p></div>
+    </div>
+    <div class="tier reveal">
+      <span class="tbadge tb2">Tier 2 · Predicted or emerging</span>
+      <h3>Proposed, not proven — explicitly labeled</h3>
+      <ul>
+        <li><strong>Learning and memory hints in rodents</strong> — modest effects, unreplicated outside the originating research network.</li>
+        <li><strong>The proposed gene-regulation mechanism</strong> — the DNA-binding model is the school’s thesis, not demonstrated by independent labs.</li>
+        <li><strong>Antioxidant-defense proposals</strong> — part of the theoretical package, not measured outcomes in humans.</li>
+      </ul>
+      <p class="tnote">Every item above is proposed or preclinical — none is a demonstrated human benefit.</p>
+    </div>
+    <div class="tier reveal">
+      <span class="tbadge tb3">Tier 3 · Community anecdotes</span>
+      <h3>Stories, not data — kept strictly separate from the evidence</h3>
+      <ul>
+        <li><strong>“Clearer mornings”</strong> — “felt like mental static turned down a notch.” Caveat: “clarity” is the vaguest outcome in nootropics.</li>
+        <li><strong>“Subtle or nothing”</strong> — “maybe slightly sharper, maybe placebo — honestly can’t tell.” The most credible reports admit uncertainty.</li>
+        <li><strong>“Quiet quitting”</strong> — “took it for two months, nothing, moved on.” Negative reports are brief — and probably common.</li>
+        <li><strong>“Older relatives”</strong> — “got it for my dad’s memory — he seems a bit sharper.” Secondhand hope with a pulse.</li>
+      </ul>
+      <p class="tnote">Paraphrased recurring themes from forums and social media — unverified stories, not evidence.</p>
+    </div>
+  </div>
+  <div class="plain reveal"><div class="plabel">Plain English</div><p><strong>Established:</strong> it’s a real, defined molecule with some animal neuroprotection hints — one school, no people. <strong>Emerging:</strong> the gene-tuning story is elegant and almost entirely theoretical. <strong>Anecdotal:</strong> the community whispers about subtle clarity and quiet exits — mood notes, not measurements.</p></div>
+</section>
+<mini-poll slug="pinealon-mini-benefits"
+  data-question="Which tier carries the most weight for you?"
+  data-answers='[["📊", "The thin established tier"], ["🐭", "Emerging animal data"], ["💬", "Community stories"], ["❌", "None convince me"]]'>
+</mini-poll>
+
+<!-- ============ CHAPTER 8 · WHO IT MAY SUIT ============ -->
+<section class="chapter" id="ch8">
+  <span class="eyebrow"><span class="n">08</span>Fit check</span>
+  <h2>Who it may <span class="hl">suit</span> — and who it should not</h2>
+  <p class="lede">Nobody has been studied in a human trial — so this chapter is about <strong>research relevance</strong> on one side and <strong>marketing traps</strong> on the other.</p>
+  <div class="duo reveal">
+    <div class="do"><h4>✓ Who it may be relevant to</h4>
+      <ul>
+        <li><strong>Researchers in the bioregulator tradition</strong> studying short-peptide gene-regulation claims.</li>
+        <li><strong>Animal neuroprotection research programs</strong> working with oxidative-stress and learning models.</li>
+        <li><strong>Readers curious about the theory</strong> — as an idea to understand, not a product to buy.</li>
+      </ul></div>
+    <div class="dont"><h4>✕ Who it may not suit — extra caution</h4>
+      <ul>
+        <li><strong>Anyone expecting proven memory or cognition benefits</strong> in humans — none demonstrated.</li>
+        <li><strong>Older adults targeted by anti-aging marketing</strong> — see a clinician about memory concerns instead.</li>
+        <li><strong>Buyers of unregulated products</strong> — purity, identity, and dose accuracy are the buyer’s gamble.</li>
+        <li><strong>Anyone stacking multiple bioregulators</strong> — attribution impossible, interactions unmapped.</li>
+      </ul></div>
+  </div>
+  <div class="kv reveal"><span class="k s">Theory interest vs product decision</span><p>Pinealon is interesting as a <strong>scientific proposal from one research school</strong>; it is not a demonstrated intervention for anyone’s brain. Curiosity about the idea is free — acting on it isn’t.</p></div>
+  <p class="fitnote">This is general information, not personal medical advice.</p>
+  <div class="plain reveal"><div class="plabel">Plain English</div><p><strong>For:</strong> the curious mind and the lab bench. <strong>Not for:</strong> anyone shopping for a sharper memory. The gap between those two is the entire evidence file.</p></div>
+</section>
+<mini-poll slug="pinealon-mini-fit"
+  data-question="Who is Pinealon actually for right now?"
+  data-answers='[["🔬", "Researchers"], ["🧠", "Theory-curious readers"], ["🚫", "No human population yet"], ["🤔", "Still deciding"]]'>
+</mini-poll>
+
+<!-- ============ CHAPTER 9 ============ -->
+<section class="chapter" id="ch9">
+  <span class="eyebrow"><span class="n">09</span>Risks & unknowns</span>
   <h2>Risks & <span class="hl">unknowns</span></h2>
   <p class="lede">The smallest molecule here carries some of the biggest <strong>"we don't knows."</strong> What's known, what's theoretical, and what's blank.</p>
   <div class="safety-grid">
     <div class="scard lvl-known reveal"><h4>Unregulated products</h4><p><strong>Observed fact:</strong> What's sold as Pinealon has <strong>no quality oversight</strong>. Supplement-grade peptides vary; independent verification is rare.</p></div>
     <div class="scard lvl-known reveal"><h4>Effectively unstudied in humans</h4><p><strong>Observed fact:</strong> With no human trials, <strong>side effects in people are uncharacterized</strong> — not "none," but "never systematically looked for."</p></div>
-    <div class="scard lvl-theory reveal"><h4>Gene-tuning unknowns</h4><p><strong>Theoretical:</strong> <strong>Theoretical:</strong> if it does modulate gene expression, <strong>off-target gene effects</strong> are unmapped — a powerful mechanism with zero safety mapping.</p></div>
-    <div class="scard lvl-theory reveal"><h4>Brain specificity unproven</h4><p><strong>Theoretical:</strong> <strong>Theoretical:</strong> the "homes to the brain" claim is the theory's load-bearing wall — and its least verified part.</p></div>
+    <div class="scard lvl-theory reveal"><h4>Gene-tuning unknowns</h4><p><strong>Theoretical:</strong> if it does modulate gene expression, <strong>off-target gene effects</strong> are unmapped — a powerful mechanism with zero safety mapping.</p></div>
+    <div class="scard lvl-theory reveal"><h4>Brain specificity unproven</h4><p><strong>Theoretical:</strong> the "homes to the brain" claim is the theory's load-bearing wall — and its least verified part.</p></div>
     <div class="scard lvl-unknown reveal"><h4>Long-term effects</h4><p><strong>Unknown:</strong> No chronic-use data of any kind. What <strong>months or years</strong> of a gene-tuning claim does is uncharted.</p></div>
-    <div class="scard lvl-unknown reveal"><h4>Purity and identity</h4><p><strong>Unknown:</strong> <strong>Unknown:</strong> what's actually in the capsule — content, purity, and dose accuracy are the buyer's gamble.</p></div>
+    <div class="scard lvl-unknown reveal"><h4>Purity and identity</h4><p><strong>Unknown:</strong> what's actually in the capsule — content, purity, and dose accuracy are the buyer's gamble.</p></div>
   </div>
   <div class="plain reveal"><div class="plabel">Plain English</div><p>Known: <strong>unstudied in humans, unregulated in stores</strong>. Theoretical: gene-level effects with <strong>no safety map</strong>. Unknown: <strong>everything else</strong>. Small molecule, large uncertainty.</p></div>
 </section>
-<mini-poll slug="pinealon-mini-ch6"
+<mini-poll slug="pinealon-mini-ch7"
   data-question="Which unknown bothers you most?"
   data-answers='[["🧪","Unstudied in humans"],["🏭","What&#39;s in the capsule"],["🧬","Gene-level unknowns"],["❓","All of it"]]'>
 </mini-poll>
-<!-- ============ CHAPTER 7 ============ -->
-<section class="chapter" id="ch7">
-  <span class="eyebrow"><span class="n">07</span>Glossary</span>
-  <h2>Speak <span class="hl">bioregulator</span></h2>
-  <p class="lede">Eleven terms, each with the science, an example, and a plain-English translation. Tap any term to expand it.</p>
+<!-- ============ CHAPTER 10 ============ -->
+<section class="chapter" id="ch10">
+  <span class="eyebrow"><span class="n">10</span>Glossary</span>
+  <h2>Understanding <span class="hl">Pinealon</span> Terminology</h2>
+  <p class="lede">Eleven terms, each with the science and a plain-English translation. Tap any term to expand it.</p>
   <div class="gloss">
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M8 24h32M16 8v32M32 8v32" fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Bioregulator</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>Short peptides (2–4 amino acids) claimed to regulate gene expression in specific organs — the Khavinson school's core concept. Pinealon is a textbook example.</p>
-      <p class="gex"><span class="gslabel">Example</span>The tradition Pinealon comes from: tiny peptides, organ-specific jobs.</p>
-      <div class="plain"><span class="plabel">Plain English</span>A tiny peptide that supposedly tunes an organ.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M8 24h32M16 8v32M32 8v32" fill="none" stroke="#fce68c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Bioregulator</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>A term from the Khavinson school of Russian peptide research for short peptides — typically two to four amino acids — claimed to regulate gene expression in a specific organ. Each bioregulator is said to target one tissue: Pinealon, the Glu-Asp-Arg tripeptide, is the candidate assigned to the brain. The concept is a theory, not an established pharmacological category, and its claims rest on the proponents’ own studies.</p>
+      <div class="plain"><span class="plabel">Plain English</span>A “bioregulator” is the name Russian peptide researchers gave to tiny peptides they claim can tune specific organs — one peptide per organ, like keys for different locks. Pinealon is their brain key. But this is their theory, not a recognized drug category, and the evidence comes mostly from the theory’s own supporters. Treat the word as a claim, not a fact.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M8 16h32v16H8z" fill="none" stroke="#a16207" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Cytomedin</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>The original natural peptide complexes extracted from animal organs — messy mixtures that the later synthetic "cytogens" were designed to replace.</p>
-      <p class="gex"><span class="gslabel">Example</span>The crude ancestor; Pinealon is the purified idea.</p>
-      <div class="plain"><span class="plabel">Plain English</span>Natural organ extracts, the rough draft.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M8 16h32v16H8z" fill="none" stroke="#07a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Cytomedin</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>In the Khavinson framework, a natural peptide complex extracted from animal organs — for example, the brain-derived mixture from which Pinealon’s lineage descends. Cytomedins are crude mixtures of many peptides and other molecules, not defined single compounds. The later synthetic “cytogens” were developed as purified, single-peptide replacements for these extracts.</p>
+      <div class="plain"><span class="plabel">Plain English</span>A cytomedin is a crude extract made from animal organs — a soup of many different peptides, not one clean molecule. The brain-derived version is the ancestor of the Pinealon idea. Later researchers tried to find the single active piece inside the soup and synthesize it alone. That single piece is what they call a cytogen.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M12 8l4 32L28 8l4 32" fill="none" stroke="#422006" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Cytogen</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>A single defined short peptide (2–4 amino acids) synthesized as the active piece of a cytomedin mixture. Pinealon (EDR) is a cytogen.</p>
-      <p class="gex"><span class="gslabel">Example</span>Pinealon's category: one molecule, not a mixture.</p>
-      <div class="plain"><span class="plabel">Plain English</span>The purified single-peptide version.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M12 8l4 32L28 8l4 32" fill="none" stroke="#06422c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Cytogen</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>A single, chemically defined short peptide — two to four amino acids — synthesized as the presumed active component of a cytomedin mixture. Where a cytomedin is a rough extract, a cytogen is one molecule made pure in the lab. Pinealon (the Glu-Asp-Arg tripeptide) is a cytogen: the purified, single-peptide version of a brain-extract idea.</p>
+      <div class="plain"><span class="plabel">Plain English</span>A cytogen is the upgrade from the crude extract: one specific short peptide, made pure in the lab, believed to be the active ingredient of the original organ soup. Pinealon is a cytogen — three amino acids, one molecule, no mixture. It’s the “purified idea” version of an old extract.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M8 12h32M8 20h20" fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Tripeptide</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>A peptide of exactly three amino acids — among the smallest molecules that can still carry a biological message.</p>
-      <p class="gex"><span class="gslabel">Example</span>Pinealon: three beads, one claimed job.</p>
-      <div class="plain"><span class="plabel">Plain English</span>A three-bead molecular necklace.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M8 12h32M8 20h20" fill="none" stroke="#fce68c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Tripeptide</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>A peptide composed of exactly three amino acids joined in sequence. Three residues is near the lower limit of molecular size for a compound still described as carrying a biological message. Pinealon’s tripeptide identity — Glu-Asp-Arg — makes it the smallest molecule featured among these infographics.</p>
+      <div class="plain"><span class="plabel">Plain English</span>A tripeptide is a molecule exactly three building blocks long — about as small as a peptide can get while still claiming a biological job. Pinealon’s three blocks are glutamic acid, aspartic acid, and arginine. It’s the tiniest molecule on this site, which is part of its mystique — and part of why its claims are hard to verify.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M8 12h32M8 20h32M8 28h32" fill="none" stroke="#a16207" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Gene expression</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>Which genes a cell switches on or off — the master control of what a cell does. Bioregulators are claimed to tune it in their target organ.</p>
-      <p class="gex"><span class="gslabel">Example</span>The dial Pinealon supposedly turns inside brain cells.</p>
-      <div class="plain"><span class="plabel">Plain English</span>A cell's on/off switches for its genes.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M8 12h32M8 20h32M8 28h32" fill="none" stroke="#07a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Gene expression</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>The process by which the information in a gene is used to produce a functional product, usually a protein — effectively, which genes a cell switches on or off. Gene expression determines a cell’s identity and behavior: a neuron and a skin cell carry the same DNA but express different genes. Bioregulators are claimed to tune this switching in their target organ, which is the entire theoretical basis of Pinealon.</p>
+      <div class="plain"><span class="plabel">Plain English</span>Gene expression is which of your genes are switched on or off in a given cell. Every cell in your body has the same DNA, but a brain cell and a skin cell read different chapters of it — that’s gene expression at work. The Pinealon theory says this tiny peptide can adjust those switches in brain cells. Whether it actually does is the unproven part.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M24 6c-8 8-8 20 0 28 8-8 8-20 0-28zM24 14v14" fill="none" stroke="#422006" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Neuron</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>A nerve cell — the brain's signaling unit. Humans are born with most of the neurons they'll ever have, which is why protecting them matters.</p>
-      <p class="gex"><span class="gslabel">Example</span>The cells Pinealon is supposed to defend.</p>
-      <div class="plain"><span class="plabel">Plain English</span>A brain cell.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M24 6c-8 8-8 20 0 28 8-8 8-20 0-28zM24 14v14" fill="none" stroke="#06422c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Neuron</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>A nerve cell — the basic signaling unit of the brain and nervous system, specialized to receive and transmit electrical and chemical signals. The adult human brain contains roughly 86 billion neurons, and most are generated before birth, with very limited replacement afterward. That limited regeneration is why protecting neurons — Pinealon’s central claim — would matter if it were achievable.</p>
+      <div class="plain"><span class="plabel">Plain English</span>A neuron is a brain cell — the basic unit that carries signals through your nervous system. You’re born with most of the neurons you’ll ever have; the adult brain barely makes new ones. That’s why “protecting neurons” sounds so valuable — and why a claim to do it deserves hard evidence, which Pinealon doesn’t have.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M12 8l12 32L36 8M18 8h12" fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Neuroprotection</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>Shielding neurons from damage or death — from oxidative stress, toxins, or aging. The core of Pinealon's claim.</p>
-      <p class="gex"><span class="gslabel">Example</span>What Pinealon is sold as: a bodyguard for brain cells.</p>
-      <div class="plain"><span class="plabel">Plain English</span>Keeping brain cells alive and working.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M12 8l12 32L36 8M18 8h12" fill="none" stroke="#fce68c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Neuroprotection</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>The preservation of neurons against damage or death from causes such as oxidative stress, toxins, or aging. In pharmacology, a neuroprotective claim means a compound demonstrably keeps neurons alive or functional under harmful conditions. Neuroprotection is the core claim made for Pinealon — and, like the rest of its file, it rests on theoretical and proponent-driven evidence rather than human trials.</p>
+      <div class="plain"><span class="plabel">Plain English</span>Neuroprotection means keeping brain cells alive and working when something threatens them — stress, toxins, or aging. It’s the central promise of Pinealon: a bodyguard for brain cells. But a bodyguard needs a track record, and Pinealon’s consists of theory and its proponents’ own studies, not human trials. The claim is the product; the proof is missing.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M24 8c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zM12 24h24" fill="none" stroke="#a16207" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Blood-brain barrier</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>The sealed vessel walls guarding the brain. Small peptides like Pinealon are theorized to cross more easily — unproven for this one.</p>
-      <p class="gex"><span class="gslabel">Example</span>The checkpoint Pinealon must pass to reach its claimed target.</p>
-      <div class="plain"><span class="plabel">Plain English</span>The brain's security checkpoint.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M24 8c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zM12 24h24" fill="none" stroke="#07a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Blood-brain barrier</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>The tightly sealed layer of endothelial cells lining the brain’s blood vessels, which restricts what can pass from the bloodstream into brain tissue. It protects the brain from toxins and pathogens but also blocks most drugs. Small peptides are theorized to cross it more easily than large ones — a hypothesis invoked for Pinealon, but unproven for this specific molecule.</p>
+      <div class="plain"><span class="plabel">Plain English</span>The blood-brain barrier is the brain’s security checkpoint — tightly sealed vessel walls that decide what gets in from the bloodstream. It keeps out toxins, but it also keeps out most drugs. Pinealon’s supporters theorize that such a tiny peptide might slip through — but “might” is doing all the work there. It has never been shown for this molecule.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M24 6l6 12-6 12-6-12zM24 6v24" fill="none" stroke="#422006" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Antioxidant</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>A molecule that neutralizes free radicals — the reactive byproducts of metabolism that damage cells. Pinealon is credited with antioxidant effects.</p>
-      <p class="gex"><span class="gslabel">Example</span>Part of the neuron-defense story.</p>
-      <div class="plain"><span class="plabel">Plain English</span>A rust-blocker for cells.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#42200622"/><path d="M24 6l6 12-6 12-6-12zM24 6v24" fill="none" stroke="#06422c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Antioxidant</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>A molecule that neutralizes free radicals — highly reactive byproducts of normal metabolism that can damage DNA, proteins, and cell membranes. The body maintains its own antioxidant defenses, and oxidative stress occurs when those defenses are overwhelmed. Pinealon is credited by its proponents with antioxidant effects, as part of the proposed neuron-defense story.</p>
+      <div class="plain"><span class="plabel">Plain English</span>An antioxidant is a molecule that disarms free radicals — unstable leftovers from your cells’ daily metabolism that can damage DNA and membranes if left unchecked. Your body has its own defenses against them. Pinealon is credited with antioxidant powers by its supporters, as part of the story that it defends brain cells. The credit, like the story, comes from the proponents.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M24 8c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zM18 24h12" fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Placebo</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>Improvement from expectation rather than treatment — strongest for vague outcomes like "clarity," exactly what Pinealon anecdotes describe.</p>
-      <p class="gex"><span class="gslabel">Example</span>The rival explanation for every "static turned down" story.</p>
-      <div class="plain"><span class="plabel">Plain English</span>Feeling sharper because you expect to.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fef08a22"/><path d="M24 8c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zM18 24h12" fill="none" stroke="#fce68c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Placebo</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>Improvement that comes from expectation rather than from a treatment’s pharmacological action. Placebo responses are strongest for subjective outcomes — mood, focus, “mental clarity” — precisely the effects Pinealon anecdotes describe. Without controlled trials, there is no way to separate a real effect of Pinealon from the effect of expecting one.</p>
+      <div class="plain"><span class="plabel">Plain English</span>The placebo effect is feeling better because you expect to feel better — not because the treatment did anything chemically. It’s strongest for fuzzy, subjective outcomes like “clarity” or “focus,” which happen to be exactly what Pinealon users report. With no controlled trials, every glowing anecdote could be the molecule, or it could be the expectation. There’s no way to tell.</div>
     </div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M18 8h12v10l-6 4-6-4zM24 22v14M18 40h12" fill="none" stroke="#a16207" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Research chemical</span><span class="plus">+</span></button><div class="g-a">
-      <p class="gsci"><span class="gslabel">The science</span>The unregulated gray-market category many bioregulators are sold under: no approved use, no quality oversight.</p>
-      <p class="gex"><span class="gslabel">Example</span>The shelf Pinealon sits on outside supplement stores.</p>
-      <div class="plain"><span class="plabel">Plain English</span>Unregulated lab supply sold online.</div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#a1620722"/><path d="M18 8h12v10l-6 4-6-4zM24 22v14M18 40h12" fill="none" stroke="#07a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Research chemical</span><span class="plus">+</span></button><div class="g-a">
+      <p class="gsci"><span class="gslabel">The science</span>An informal commercial category for compounds sold for laboratory use without regulatory approval as drugs or supplements. The label implies no approved use, no manufacturing oversight, and no quality guarantees — whatever the product page suggests. Many bioregulators, Pinealon included, are sold under this gray-market banner.</p>
+      <div class="plain"><span class="plabel">Plain English</span>“Research chemical” is the label on the gray-market shelf — compounds sold as lab supplies, with no approval as drugs and no one checking what’s actually in the vial. It’s a legal gray zone, not a quality stamp. Pinealon sits on that shelf: sold online, unregulated, and carrying none of the oversight that approved medicines get.</div>
     </div></div>
   </div>
 </section>
-<mini-poll slug="pinealon-mini-ch7"
+<mini-poll slug="pinealon-mini-ch8"
   data-question="Did the glossary clear things up?"
   data-answers='[["✅","Yes, much clearer"],["📖","Somewhat"],["🤷","Still fuzzy"],["⏭️","Skipped it"]]'>
 </mini-poll>
-<!-- ============ CHAPTER 8 ============ -->
-<section class="chapter" id="ch8">
-  <span class="eyebrow"><span class="n">08</span>Takeaways</span>
+<!-- ============ CHAPTER 11 ============ -->
+<section class="chapter" id="ch11">
+  <span class="eyebrow"><span class="n">11</span>Takeaways</span>
   <h2>The <span class="hl">bottom line</span></h2>
-  <p class="lede">Eight chapters, distilled. What the molecule is, what the evidence says, and what would have to change.</p>
+  <p class="lede">Eleven chapters, distilled. What the molecule is, what the evidence says, and what would have to change.</p>
   <div class="take-grid">
 <div class="take reveal"><div class="tk">🧬</div><h4>Three amino acids</h4><p>EDR — the smallest molecule on this site.</p></div>
 <div class="take reveal"><div class="tk">🧠</div><h4>Brain-targeted — claimed</h4><p>Organ-homing is the theory's load-bearing core.</p></div>
@@ -750,7 +1027,8 @@ mini-poll { display: block; }
     </ul>
   </div>
 </section>
-<mini-poll slug="pinealon-mini-ch8"
+<h3 class="rate-h">⭐ How would you rate this infographic?<span class="sub2">Tap to expand, pick an answer, hit vote.</span></h3>
+<mini-poll slug="pinealon-mini-ch9"
   data-question="How would you rate this infographic?"
   data-answers='[["😍","⭐⭐⭐⭐⭐ · Loved it"],["🙂","⭐⭐⭐⭐ · Good stuff"],["😐","⭐⭐⭐ · It&#39;s okay"]]'>
 </mini-poll>
@@ -794,7 +1072,7 @@ setTheme(document.documentElement.getAttribute("data-theme")==="light"?"light":"
   function size(){W=window.innerWidth;H=window.innerHeight;svg.setAttribute("viewBox","0 0 "+W+" "+H);}
   size();window.addEventListener("resize",size);
   var NS="http://www.w3.org/2000/svg";
-  var colors=["#fef08a","#a16207","#a16207","#865105","#ffffff","#fef08a"];
+  var colors=["#fce68c","#07a169","#07a169","#058657","#ffffff","#fce68c"];
   for(var i=0;i<140;i++){
     var c=document.createElementNS(NS,"circle");
     var col=colors[i%colors.length];
@@ -879,7 +1157,7 @@ var bar=document.getElementById("progress"),
     tocBar=document.getElementById("tocBar"),tocPct=document.getElementById("tocPct"),
     links=Array.prototype.slice.call(document.querySelectorAll(".toc a, nav.chapters a")),
     rail=document.getElementById("rail"),
-    sections=["ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8"].map(function(id){return document.getElementById(id);}),
+    sections=["ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8","ch9","ch10","ch11"].map(function(id){return document.getElementById(id);}),
     pill=document.querySelector(".toc-pill"),cur=-1,ticking=false;
 function easeWidth(el,v){el.style.width=v+"%";}
 function update(){
@@ -916,13 +1194,16 @@ window.addEventListener("load",function(){cur=-1;update();});
 if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){cur=-1;update();});}
 setTimeout(function(){cur=-1;update();},800);
 update();
+/* ---------- SMIL under reduced motion ---------- */
+if(reduced){document.querySelectorAll("svg").forEach(function(s){try{s.pauseAnimations();}catch(e){}});}
+
 /* ---------- completion confetti ---------- */
 var done=false;
 function fireConfetti(){
   var c=document.getElementById("confetti"),ctx=c.getContext("2d");
   c.width=window.innerWidth;c.height=window.innerHeight;
   c.classList.add("show");
-  var cols=["#fef08a","#a16207","#ffffff","#ef9b0a","#edf0f9"],parts=[];
+  var cols=["#fce68c","#07a169","#ffffff","#0aef9b","#edf0f9"],parts=[];
   for(var i=0;i<45;i++)parts.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.25,
     w:4+Math.random()*4,h:5+Math.random()*5,c:cols[i%cols.length],
     vy:0.7+Math.random()*1.1,ph:Math.random()*Math.PI*2,sw:0.4+Math.random()*0.8,
@@ -958,7 +1239,7 @@ fio.observe(document.querySelector("footer"));
 /* Mini-poll backend config. Empty = preview mode (local votes, 3-day cooldown).
    To go live: fill in your Supabase project URL + anon key (see poll-admin README). */
 window.MINI_POLL_CONFIG = { supabaseUrl: "", anonKey: "", turnstileSiteKey: "",
-  accents: ["#fef08a","#a16207","#ffffff","#fff6b8","#7e4c05","#9f704c","#c48730","#cfc051","#e3d574"] };
+  accents: ["#fce68c","#07a169","#ffffff","#fdf0ba","#057e52","#4c9f81","#30c48e","#cfb651","#e3cd74"] };
 </script>
 <script>
 /* Mini-poll web component — vanilla JS, no dependencies. Polls render from
@@ -1031,8 +1312,8 @@ window.MINI_POLL_CONFIG = { supabaseUrl: "", anonKey: "", turnstileSiteKey: "",
      Palette comes from window.MINI_POLL_CONFIG.accents when the page sets one,
      otherwise the default nine-color set. */
   var ACCENTS = (window.MINI_POLL_CONFIG && window.MINI_POLL_CONFIG.accents) ||
-                ['#fef08a', '#a16207', '#ffffff', '#9f704c', '#9f704c',
-                 '#a16207', '#ef9b0a', '#fc2559', '#b87f2d'];
+                ['#fce68c', '#07a169', '#ffffff', '#4c9f81', '#4c9f81',
+                 '#07a169', '#0aef9b', '#f9cf28', '#2db885'];
   function pollAccents(slug) {
     var m = /ch(\d+)/.exec(slug || '');
     var i = m ? parseInt(m[1], 10) - 1 : 0;
